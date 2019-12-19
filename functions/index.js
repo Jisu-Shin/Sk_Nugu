@@ -8,6 +8,8 @@
  * req.body는 SK nugu에서 들어오는 json입니다.
  */
 
+ // 수정을 한거임 
+
 exports.nugu_template = (req, res) => {
     const appTitle = '앱 타이틀'; // 앱 타이틀을 적어주세요
     const requestBody = req.body; //request의 body부분
