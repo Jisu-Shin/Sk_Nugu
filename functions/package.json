@@ -1,23 +1,11 @@
 {
-  "name": "Nugu_Template",
-  "engines": {
-    "node": ">= 8.0"
-  },
-  "description": "Nugu_Template",
+  "name": "sk_nugu_saja",
+  "version": "1.0.0",
+  "description": "study project",
   "main": "index.js",
   "scripts": {
-    "deploy": "gcloud app deploy",
-    "start": "node app.js",
-    "lint": "samples lint",
-    "pretest": "npm run lint",
-    "system-test": "samples test app",
-    "test": "npm run system-test",
-    "e2e-test": "samples test deploy"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "private": "true",
-  "license": "ISC",
-  "dependencies": {
-    "package": "^1.0.1",
-    "package.json": "^2.0.1",
-  }
+  "author": "zsu",
+  "license": "ISC"
 }
