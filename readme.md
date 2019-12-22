@@ -25,7 +25,7 @@ sk Nugu 인공지능 스피커 어플로 사자성어 게임을 만들어봤다 
 ***
 # 설정
 먼저  [NUGU developers](https://developers.nugu.co.kr/#/)에서 회원가입을 한다음 <br>
-<img src="/img/playbuilder.PNG" width="500">
+<img src="/image/playbuilder.PNG" width="500">
 developer 사이트에서 사진과 같은 방법으로 넘어오면 된다<br>
 
 
@@ -39,9 +39,10 @@ developer 사이트에서 사진과 같은 방법으로 넘어오면 된다<br>
 ## 1. 사자성어 게임
 
 
-<img src="/img/saja.PNG" width="500">
-![make_package](./image/make_package.PNG) <br>
-![myerror_pack](./image/myerror_pack.PNG) <br>
+<img src="/image/saja.PNG" width="500"> <br>
+<img src="/image/make_package.png" width="500"> <br>
+<img src="/imgae/myerror_pack.png" width="500"> <br> 
+
 
 2. 사자성어 뜻을 물어보기
 3. 오늘의 사자성어 : 새로운 사자성어를 알려주는 기능
