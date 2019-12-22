@@ -21,19 +21,27 @@ sk Nugu 인공지능 스피커 어플로 사자성어 게임을 만들어봤다 
 그 중에 제한적인 사자성어로 해야겠다고 생각을 갖고 틀을 잡기 시작했다! <br>
 
 ***
+# 설정
+먼저  [NUGU developers](https://developers.nugu.co.kr/#/)에서 회원가입을 한다음 <br>
+<img scr="/img/playbuilder.PNG" width="500">
+developer 사이트에서 사진과 같은 방법으로 넘어오면 된다<br>
+
+
+![play](./image/play.PNG)<br> {: width="500"}
+
+
+***
 
 # 기능
 
-1. 사자성어 게임
+## 1. 사자성어 게임
+
+
+<center><img src="/img/saja.PNG" width="500"></center>
+![make_package](./image/make_package.PNG)<br>
+![myerror_pack](./image/myerror_pack.PNG)<br>
+
 2. 사자성어 뜻을 물어보기
 3. 오늘의 사자성어 : 새로운 사자성어를 알려주는 기능
 
 총 세가지를 만들어보았다
-
-## 1. 사자성어 게임
-
-먼저 https://developers.nugu.co.kr/#/ 사이트에 회원가입을 한다음 play builder 로 들어가야한다!<br>
-![play](./image/play.PNG)<br>
-![saja](./image/saja.PNG)<br>
-![make_package](./image/make_package.PNG)<br>
-![myerror_pack](./image/myerror_pack.PNG)<br>
