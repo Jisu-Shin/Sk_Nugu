@@ -33,4 +33,7 @@ sk Nugu 인공지능 스피커 어플로 사자성어 게임을 만들어봤다 
 ## 1. 사자성어 게임
 
 먼저 https://developers.nugu.co.kr/#/ 사이트에 회원가입을 한다음 play builder 로 들어가야한다!
-![play](./image/play.png)
+![play](./image/play.PNG)
+![saja](./image/saja.PNG)
+![make_package](./image/make_package.PNG)
+![myerror_pack](./image/myerror_pack.PNG)
