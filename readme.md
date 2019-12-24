@@ -29,7 +29,7 @@ sk Nugu 인공지능 스피커 어플로 사자성어 게임을 만들어봤다 
 먼저  [NUGU developers](https://developers.nugu.co.kr/#/)에서 회원가입을 한다음 
 
 
-<div style="text-align: center> <img src="/image/playbuilder.png" width="80%"> </div> 
+<center> <img src="/image/playbuilder.png" width="80%"> </center> 
 
 
 developer 사이트에서 사진과 같은 방법으로 넘어오면 된다<br>
