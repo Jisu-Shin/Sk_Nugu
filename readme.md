@@ -64,7 +64,7 @@ SK Nugu play 기본설정이 다 되었다면 백엔드 설정으로 넘어가�
 <img src="/image/function_03.png" width="40%">
 
 사진 순서대로 따라오면 직접 만든 nugu play kit 에 맞는 백엔드서버도 만들어진다
-
+--업데이트--
 
 ***
 
