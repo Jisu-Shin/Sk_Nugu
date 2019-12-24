@@ -28,17 +28,17 @@ sk Nugu 인공지능 스피커 어플로 사자성어 게임을 만들어봤다 
 
 # 설정
 
-먼저  [NUGU developers](https://developers.nugu.co.kr/#/) 에서 회원가입을 한다음 
+먼저  [NUGU developers](https://developers.nugu.co.kr/#/) 에서 회원가입을 한다음
 
 
 <p align="center">
-<img src="/image/playbuilder.png" width="80%"> 
+<img src="/image/playbuilder.png" width="80%">
 </p>
 
 developer 사이트에서 사진과 같은 방법으로 넘어오면 된다<br>
 
 
-<p align="center"><img src="/image/play.PNG" width="80%"></p> 
+<p align="center"><img src="/image/play.PNG" width="80%"></p>
 
 
 SK Nugu play 기본설정이 다 되었다면 백엔드 설정으로 넘어가면된다
@@ -48,9 +48,22 @@ SK Nugu play 기본설정이 다 되었다면 백엔드 설정으로 넘어가�
 
 처음으로 [구글클라우드](https://cloud.google.com/functions/) 를 들어가게 되면 뜨는 화면이다
 
---사진넣기--
+
+<img src="/image/gcloud.png" width="80%"> <br>
+
+1년간 무료로 사용할 수 있는 크레딧을 주기때문에 공부삼아 해보기 딱 좋다 <br>
 
 
+<img src="/image/function.png" width="60%">
+<img src="/image/cloudfunction.png" width="60%"><br>
+
+빨간 화살표가 있는 곳은 클릭을 해서 들어가면 된다
+
+<img src="/image/function_01.png" width="40%">
+<img src="/image/function_02.png" width="40%">
+<img src="/image/function_03.png" width="40%">
+
+사진 순서대로 따라오면 직접 만든 nugu play kit 에 맞는 백엔드서버도 만들어진다
 
 
 ***
@@ -60,7 +73,7 @@ SK Nugu play 기본설정이 다 되었다면 백엔드 설정으로 넘어가�
 ## 1. 사자성어 게임
 
 <img src="/image/make_package.PNG"> <br>
-<img src="/image/myerror_pack.PNG"> <br> 
+<img src="/image/myerror_pack.PNG"> <br>
 
 
 2. 사자성어 뜻을 물어보기
