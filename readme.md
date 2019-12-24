@@ -4,6 +4,7 @@ sk Nugu 인공지능 스피커 어플로 사자성어 게임을 만들어봤다 
 사자성어 앞의 두글자를 문제로 내고 / 답변을 사자성어 뒤 두글자를 대답해야 한다<br>
 
 ***
+
 # 동기
 
 
@@ -23,9 +24,14 @@ sk Nugu 인공지능 스피커 어플로 사자성어 게임을 만들어봤다 
 그 중에 제한적인 사자성어로 해야겠다고 생각을 갖고 틀을 잡기 시작했다! <br>
 
 ***
+
 # 설정
-먼저  [NUGU developers](https://developers.nugu.co.kr/#/)에서 회원가입을 한다음 <br>
-<center> <img src="/image/playbuilder.png" width="80%"> </center> <br>
+먼저  [NUGU developers](https://developers.nugu.co.kr/#/)에서 회원가입을 한다음 
+
+
+<div style="text-align: center> <img src="/image/playbuilder.png" width="80%"> </div> 
+
+
 developer 사이트에서 사진과 같은 방법으로 넘어오면 된다<br>
 
 
