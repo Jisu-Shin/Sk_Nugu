@@ -9,7 +9,6 @@ Sk Nugu play builder 로 사자성어 게임을 만들어봤다 <br>
 
 <p align="center">
 <img src="https://postfiles.pstatic.net/MjAxOTA5MDNfMTY4/MDAxNTY3NTIxNTMzMTg2.HuOcoxZIPBhvIImRm4-zvVU3Yah25gbfoRp7WbrvrMgg.US_t09vfhFWAIB_2cOW4XAJVQaB0dbA3HkD0Mb-UbMEg.JPEG.sjszzang0929/output_939541074.jpg?type=w966" height="400"> <img src="https://postfiles.pstatic.net/MjAxOTA5MDNfNDYg/MDAxNTY3NTIxNTE3MjA2.FCQ9o_vhIa4FxaWXf76BCFosmNtVQOSQjNy71qY452Ig.bqRXr2KGRL1UXp9hcraeyJnTI8iyRJsUM36CqNtEZfwg.JPEG.sjszzang0929/output_3337481737.jpg?type=w966" height="400">
-</p>
 
 
 휴학생활을 하고 있던 찰나 , 페북으로 SK 아카데미에서 수업이 진행 된다는 것을 알게 되었다<br>
@@ -64,14 +63,17 @@ SK Nugu play 기본설정이 다 되었다면 백엔드 설정으로 넘어가�
 <img src="/image/function_01.png" width="33%"><img src="/image/function_02.png" width="33%"><img src="/image/function_03.png" width="33%">
 
 사진 순서대로 따라오면 직접 만든 nugu play kit 에 맞는 백엔드서버도 만들어진다<br>
-만든 후에는 nugu play builder로 이동해서 외부연동서버 주소에 URL을 넣어준다<br><br>
-<img src="/image/backend_add.png"><br>
+
+만든 후에는 nugu play builder로 이동해서 외부연동서버 주소에 URL을 넣어줘야한다<br><br>
+
+<img src="/image/backend_add.png" width="90%"><br>
 다 만들고 나서 Cloud functions -> 트리거 -> URL을 복사해도 되고 <br>
 위에서 맨 왼쪽 사진에 nugu play builder에 넣어야할 주소라고 했던 URL을 복사해도 된다<br><br>
 
-<img src="/image/외부연동서버.png"><br>
+<img src="/image/외부연동서버.png"><br><br>
 그다음 nugu play builder로 와서 순서대로 입력을 해주면 된다 <br>
-연결 실패시 인공지능 스피커가 말할 내용까지 작성해주면 기본 설정은 끝이 난다 <br>
+연결 실패시 인공지능 스피커가 말할 내용까지 작성해주면 기본 설정은 끝이 난다
+<br>
 
 </p>
 
@@ -87,12 +89,12 @@ SK Nugu play 기본설정이 다 되었다면 백엔드 설정으로 넘어가�
 반복문을 구현하고 싶은데 어떻게 하면 가능할지 고민해보았다 <br>
 
 
-<img src="https://postfiles.pstatic.net/MjAxOTA5MDdfMjIz/MDAxNTY3ODU3ODAzMjA3.3YjmaaoB-eAL09gEqCrL2Rt9C-96j853vMyu1zMHJXAg.Nl4W01JGY-HKwc9xDxy_Ivu5I5BJlqAx19z_F7AC7Kcg.PNG.sjszzang0929/image.png?type=w966" width=65%">
+<img src="https://postfiles.pstatic.net/MjAxOTA5MDdfMjIz/MDAxNTY3ODU3ODAzMjA3.3YjmaaoB-eAL09gEqCrL2Rt9C-96j853vMyu1zMHJXAg.Nl4W01JGY-HKwc9xDxy_Ivu5I5BJlqAx19z_F7AC7Kcg.PNG.sjszzang0929/image.png?type=w966" width="65%">
 
 
 그래서 만들어진 사자성어 play 구조이다 <br>
 다 만들고 나서 느낀점은 이름명을 만드는 걸 너무 쉽게 생각했다는 것이다 <br>
-뒤에 _saja 를 적는게 아니라 _intent ,  _action 을 적었어야 했다 <br>
+**뒤에 _saja 를 적는게 아니라 _intent ,  _action 을 적었어야 했다** <br>
 Trigger는 사람이 말을 하면 actions은 그에 맞는 행동을 하는 것이다 <br><br>
 
 <img src="/image/hi_saja.png" width="90%">
