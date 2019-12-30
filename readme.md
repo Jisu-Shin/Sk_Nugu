@@ -10,8 +10,9 @@ Sk Nugu play builder 로 사자성어 게임을 만들어봤다 <br>
 <p align="center">
 <img src="https://postfiles.pstatic.net/MjAxOTA5MDNfMTY4/MDAxNTY3NTIxNTMzMTg2.HuOcoxZIPBhvIImRm4-zvVU3Yah25gbfoRp7WbrvrMgg.US_t09vfhFWAIB_2cOW4XAJVQaB0dbA3HkD0Mb-UbMEg.JPEG.sjszzang0929/output_939541074.jpg?type=w966" height="400"> <img src="https://postfiles.pstatic.net/MjAxOTA5MDNfNDYg/MDAxNTY3NTIxNTE3MjA2.FCQ9o_vhIa4FxaWXf76BCFosmNtVQOSQjNy71qY452Ig.bqRXr2KGRL1UXp9hcraeyJnTI8iyRJsUM36CqNtEZfwg.JPEG.sjszzang0929/output_3337481737.jpg?type=w966" height="400">
 <br>
+</p>
 
-
+<p align="center">
 휴학생활을 하고 있던 찰나 , 페북으로 SK 아카데미에서 수업이 진행 된다는 것을 알게 되었다<br>
 때 마침 시간도 가능하고 새로운 프로젝트를 할 수 있겠다 라는 생각에 바로 참가했다!
 
@@ -31,11 +32,13 @@ Sk Nugu play builder 로 사자성어 게임을 만들어봤다 <br>
 # 설정
 
 <p align="center">
-먼저  [NUGU developers](https://developers.nugu.co.kr/#/) 에서 회원가입을 한다음 <br>
+
+먼저 [NUGU developers](https://developers.nugu.co.kr/#/) 에서 회원가입을 한다음 <br>
 
 <br><img src="/image/playbuilder.png" width="80%"><br>
 
 developer 사이트에서 사진과 같은 방법으로 play builder에 넘어오면 된다<br>
+</p>
 
 <br><img src="/image/play.PNG" width="80%"><br>
 
@@ -73,7 +76,6 @@ SK Nugu play 기본설정이 다 되었다면 백엔드 설정으로 넘어가�
 그다음 nugu play builder로 와서 순서대로 입력을 해주면 된다 <br>
 연결 실패시 prompt 에다가 인공지능 스피커가 말할 내용까지 작성해주면 기본 설정은 끝이 난다<br>
 사진과 같게 적어도 되고 다르게 작성해도 상관 없다<br>
-</p>
 
 ***
 
