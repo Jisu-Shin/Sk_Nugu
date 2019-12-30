@@ -99,12 +99,14 @@ SK Nugu play 기본설정이 다 되었다면 백엔드 설정으로 넘어가�
 **@뒤에 _saja 를 적는게 아니라 _intent ,  _action 을 적었어야 했다@** <br>
 Trigger는 사람이 말을 하는 부분 actions은 그에 맞는 행동을 인공지능스피커가 하는 것이다 <br>
 
-<img src="/image/intent 만들기.gif" width="90%"><br><br>
-**직접 만든 play => Intents => intent 추가** 를 한다
+
 </div>
 
 ### intent 만들기
-> <img src="/image/hi_saja.png" width="90%"><br><br>
+> <img src="/image/intent 만들기.gif" width="90%"><br><br>
+**직접 만든 play => Intents => intent 추가** 를 한다
+<br><img src="/image/hi_saja.png" width="90%"><br>
+
 위의 사진은 Play를 시작할때 만든 intent 이다 <br>
 intent는 사람이 AI 스피커에게 하는 말이므로 사용자들의 예상 발화를 최대한 많이 작성하는 것이 좋다 <br>
 문장을 다 만든 작성한 이후에 아래에 있는 play 저장을 눌러준<br>
@@ -117,7 +119,7 @@ intent에 맞는 action을 작성하기 위해 **Actions => Custom Actions => Ac
 
 <br><img src="/image/action_01.png" width="90%"><br>
 
-action 이름을 알맞게 적어준다! intent랑 똑같게 적고 뒤에 _action 이라고 적으면 더 좋을 것이다<br>
+action 이름을 알맞게 적어준다! intent랑 똑같게 적고 뒤에 _action 이라고 적으면 더 좋을 것이다 <br>
 그다음 앞서 만든 intent랑 연결해준다
 
 <br><img src="/image/action_02.png" width="90%"><br>
