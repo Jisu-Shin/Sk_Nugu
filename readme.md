@@ -76,6 +76,8 @@ SK Nugu play 기본설정이 다 되었다면 백엔드 설정으로 넘어가�
 그다음 nugu play builder로 와서 순서대로 입력을 해주면 된다 <br>
 연결 실패시 prompt 에다가 인공지능 스피커가 말할 내용까지 작성해주면 기본 설정은 끝이 난다<br>
 사진과 같게 적어도 되고 다르게 작성해도 상관 없다<br>
+
+
 </div>
 
 ***
@@ -84,53 +86,43 @@ SK Nugu play 기본설정이 다 되었다면 백엔드 설정으로 넘어가�
 
 ## 1. 사자성어 게임
 
-<div algin="center">
-<img src="https://postfiles.pstatic.net/MjAxOTA5MDdfNzQg/MDAxNTY3ODU5MDYwMjEy.1dBvgqEYsN7mlSUfTeKhrl1RPmBUtv1LFOF3d3rWc0gg.ZpQVAZ1hyTBHgHg3EPzvmFDxDg2_je9rY4QiAxUKxvMg.PNG.sjszzang0929/SE-b69b9e60-ce12-4046-bd1c-9153b44dec43.png?type=w966" width="65%">
+<div align="center">
+<img src="https://postfiles.pstatic.net/MjAxOTA5MDdfNzQg/MDAxNTY3ODU5MDYwMjEy.1dBvgqEYsN7mlSUfTeKhrl1RPmBUtv1LFOF3d3rWc0gg.ZpQVAZ1hyTBHgHg3EPzvmFDxDg2_je9rY4QiAxUKxvMg.PNG.sjszzang0929/SE-b69b9e60-ce12-4046-bd1c-9153b44dec43.png?type=w966" width="65%"><br>
 
 구현하고 싶은 전체적인 틀을 노트에다가 그렸보았다 <br>
 반복문을 구현하고 싶은데 어떻게 하면 가능할지 고민해보았다 <br>
 
-
-<img src="https://postfiles.pstatic.net/MjAxOTA5MDdfMjIz/MDAxNTY3ODU3ODAzMjA3.3YjmaaoB-eAL09gEqCrL2Rt9C-96j853vMyu1zMHJXAg.Nl4W01JGY-HKwc9xDxy_Ivu5I5BJlqAx19z_F7AC7Kcg.PNG.sjszzang0929/image.png?type=w966" width="85%">
-
+<br><img src="https://postfiles.pstatic.net/MjAxOTA5MDdfMjIz/MDAxNTY3ODU3ODAzMjA3.3YjmaaoB-eAL09gEqCrL2Rt9C-96j853vMyu1zMHJXAg.Nl4W01JGY-HKwc9xDxy_Ivu5I5BJlqAx19z_F7AC7Kcg.PNG.sjszzang0929/image.png?type=w966" width="85%"><br>
 
 최종적으로 만들어진 사자성어 play 구조이다 <br>
 다 만들고 나서 느낀점은 이름짓는 것 너무 쉽게 생각했다는 것이다 <br>
 **@뒤에 _saja 를 적는게 아니라 _intent ,  _action 을 적었어야 했다@** <br>
 Trigger는 사람이 말을 하는 부분 actions은 그에 맞는 행동을 인공지능스피커가 하는 것이다 <br>
 
-
 </div>
 
 ### intent 만들기
 > <img src="/image/intent 만들기.gif" width="90%"><br><br>
-**직접 만든 play => Intents => intent 추가** 를 한다
-<br><img src="/image/hi_saja.png" width="90%"><br>
-
+**직접 만든 play => Intents => intent 추가** 를 한다<br>
+<br><img src="/image/hi_saja.png" width="90%"><br><br>
 위의 사진은 Play를 시작할때 만든 intent 이다 <br>
 intent는 사람이 AI 스피커에게 하는 말이므로 사용자들의 예상 발화를 최대한 많이 작성하는 것이 좋다 <br>
-문장을 다 만든 작성한 이후에 아래에 있는 play 저장을 눌러준<br>
+문장을 다 만든 작성한 이후에 아래에 있는 play 저장을 눌러준다<br>
 
 
 ### action 만들기
 > <img src="/image/action이동.gif" width="90%"><br><br>
-intent에 맞는 action을 작성하기 위해 **Actions => Custom Actions => Action** 추가를 누른다
-내가 작성한 intent에 다 맞는 action을 연결시켜줬기 때문에 "연결한 Intent가 없습니다"가 떴다
-
-<br><img src="/image/action_01.png" width="90%"><br>
-
+intent에 맞는 action을 작성하기 위해 **Actions => Custom Actions => Action** 추가를 누른다<br>
+내가 작성한 intent에 다 맞는 action을 연결시켜줬기 때문에 "연결한 Intent가 없습니다"가 떴다<br>
+<br><img src="/image/action_01.png" width="90%"><br><br>
 action 이름을 알맞게 적어준다! intent랑 똑같게 적고 뒤에 _action 이라고 적으면 더 좋을 것이다 <br>
 그다음 앞서 만든 intent랑 연결해준다
-
-<br><img src="/image/action_02.png" width="90%"><br>
-
+<br><img src="/image/action_02.png" width="90%"><br><br>
 백엔드로 변수에다가 문제들을 넣어야하므로 백엔드 프록시를 ON으로 돌려놓는다<br>
 회색변수는 action에서만 사용되는 변수가 아니므로 다른 곳에서 설정을 해줘야한다 <br>
-
-<br><img src="/image/back_para.gif"><br>
-
-**Global 설정 => Backend Parameter 에서 변수들을 입력해준다**
-협업을 한다면 옆에다가 변수가 어디에 쓰이는지 적는게 좋다
+<br><img src="/image/back_para.gif" width="90%"><br><br>
+**Global 설정 => Backend Parameter 에서 변수들을 입력해준다**<br>
+협업을 한다면 옆에다가 변수가 어디에 쓰이는지 적는게 좋다<br>
 
 
 
