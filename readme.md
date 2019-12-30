@@ -24,20 +24,21 @@ Sk Nugu play builder 로 사자성어 게임을 만들어봤다 <br>
 이 세상에 있는 모든 네글자를 다 끌어오기는 힘드니까 <br>
 그 중에 제한적인 사자성어로 해야겠다고 생각을 갖고 틀을 잡기 시작했다! <br>
 
+</div>
 
 
 ***
 
 # 설정
 
-<div style="text-align:center">
+<div align="center">
 
 먼저 [NUGU developers](https://developers.nugu.co.kr/#/) 에서 회원가입을 한다음 <br>
 
 <br><img src="/image/playbuilder.png" width="80%"><br>
 
 developer 사이트에서 사진과 같은 방법으로 play builder에 넘어오면 된다<br>
-</p>
+
 
 <br><img src="/image/play.PNG" width="80%"><br>
 
