@@ -55,11 +55,11 @@ SK Nugu play 기본설정이 다 되었다면 백엔드 설정으로 넘어가�
 
 <br><img src="/image/gcloud.png"> <br>
 
-1년간 무료로 사용할 수 있는 크레딧을 주기때문에 공부삼아 해보기 딱 좋다 <br>
+1년간 무료로 사용할 수 있는 크레딧을 주기때문에 공부삼아 해보기 딱 좋다
 
 <br><img src="/image/function.png" width="95%"><br>
 
-빨간 화살표가 있는 곳은 클릭을 해서 들어가면 된다<br>
+빨간 화살표가 있는 곳은 클릭을 해서 들어가면 된다
 
 <br><img src="/image/function_01.png" width="33%"><img src="/image/function_02.png" width="33%"><img src="/image/function_03.png" width="33%"><br><br>
 
@@ -113,7 +113,7 @@ Trigger는 사람이 말을 하는 부분 actions은 그에 맞는 행동을 인
 intent는 사람이 AI 스피커에게 하는 말이므로 사용자들의 예상 발화를 최대한 많이 작성하는 것이 좋다 <br>
 문장을 다 만든 작성한 이후에 아래에 있는 play 저장을 눌러준다<br><br>
 
-
+<br>
 
 ### action 만들기
 > <img src="/image/action이동.gif" width="90%"><br><br>
@@ -128,6 +128,40 @@ action 이름을 알맞게 적어준다! intent랑 똑같게 적고 뒤에 _acti
 <br><img src="/image/back_para.gif" width="90%"><br><br>
 **Global 설정 => Backend Parameter 에서 변수들을 입력해준다**<br>
 협업을 한다면 옆에다가 변수가 어디에 쓰이는지 적는게 좋다<br><br>
+<br><img src="/image/output.png" width="80%"><br>
+이제 play가 문제를 내는 ouput을 정의하는 곳이다 <br>
+play가 사용자들이 답변을 한다는 걸 알 수 있도록 **정답을 외친후 답변**을 해달라고 요청한다<br>
+que_index 변수는 (0-4)를 갖고 있으므로 숫자로 직접 발화를 하는 것보다 <br>
+fileter를 이용해 한글로 바꿔줘서 발화를 하는게 낫다고 생각했다<br>
+<br><img src="/image/filter.gif" width="80%"><br>
+**Responce Filters => NLG Translator => (맨 오른쪽 파란색버튼) + Translator 추가를 해준다<br>
+
+
+<div align="center">
+
+사자야 게임하자 라는 질문을 받게 되면 정답을 체크하는 발화는 나오면 안되므로 <br>
+게임시작/게임중간/게임마지막/으로 나누어서 발화를 만들었다 <br>
+
+[que_index(문제번호)가 0일 경우] 지금까지는 게임을 시작하기 위한 intent와 action을 만들었다 <br>
+[que_indx(문제번호)가 1~3일 경우]이제는 게임을 하면서 앞에 질문에 대한 정답과 오답을 알려주는 intent와 action을 만들것이다<br>
+
+
+</div>
+
+### intent 만들기
+> <br><img src="/image/answer_intent.gif" width="80%"><br>
+첫번째 질문이 나왔으니 그 이후부터 대답할 사용자의 예상발화들을 담아 놓았다 <br>
+이전 action에서 정답을 외치고 답변을 해달라고 했으니 그에 맞게 발화를 작성했다<br>
+사자성어 뒤에서 두글자를 모아논 것이다<br>
+backend에 담아놓은 사자성어의 두글자만 작성했다 <br>
+여기서 하나 아쉬운점이 있다 <br>
+굳이 내가 다 작성하지 않고 bacekend로 사자성어의 뒷부분을 알아서 가져와서 했으면 얼마나 좋았을가라는 아쉬움이 있다 <br>
+<br><img src="/image/entity.gif width="80%">"</br>
+이제는 Entity를 사용할 것이다. Entity는 같은 속성들이 모여진 집합체로 생각하면 편하다<br>
+intent에서 집합체에 포함된 속성에 따라 답변을 하고 싶다면 사용하기 아주 좋다<br>
+
+### action 만들기
+
 
 
 
