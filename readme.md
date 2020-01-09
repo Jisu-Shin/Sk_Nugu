@@ -87,20 +87,21 @@ SK Nugu play 기본설정이 다 되었다면 백엔드 설정으로 넘어가�
 ## 1. 사자성어 게임
 
 <div align="center">
-<img src="https://postfiles.pstatic.net/MjAxOTA5MDdfNzQg/MDAxNTY3ODU5MDYwMjEy.1dBvgqEYsN7mlSUfTeKhrl1RPmBUtv1LFOF3d3rWc0gg.ZpQVAZ1hyTBHgHg3EPzvmFDxDg2_je9rY4QiAxUKxvMg.PNG.sjszzang0929/SE-b69b9e60-ce12-4046-bd1c-9153b44dec43.png?type=w966" width="65%"><br>
+<br>
 
+<br><img src="https://postfiles.pstatic.net/MjAxOTA5MDdfNzQg/MDAxNTY3ODU5MDYwMjEy.1dBvgqEYsN7mlSUfTeKhrl1RPmBUtv1LFOF3d3rWc0gg.ZpQVAZ1hyTBHgHg3EPzvmFDxDg2_je9rY4QiAxUKxvMg.PNG.sjszzang0929/SE-b69b9e60-ce12-4046-bd1c-9153b44dec43.png?type=w966" width="65%"><br>
 
 구현하고 싶은 전체적인 틀을 노트에다가 그렸보았다 <br>
 반복문을 구현하고 싶은데 어떻게 하면 가능할지 고민해보았다 <br>
 
 <br><img src="https://postfiles.pstatic.net/MjAxOTA5MDdfMjIz/MDAxNTY3ODU3ODAzMjA3.3YjmaaoB-eAL09gEqCrL2Rt9C-96j853vMyu1zMHJXAg.Nl4W01JGY-HKwc9xDxy_Ivu5I5BJlqAx19z_F7AC7Kcg.PNG.sjszzang0929/image.png?type=w966" width="85%"><br>
 
-
 최종적으로 만들어진 사자성어 play 구조이다 <br>
 다 만들고 나서 느낀점은 이름짓는 것 너무 쉽게 생각했다는 것이다 <br>
 **@뒤에 _saja 를 적는게 아니라 _intent ,  _action 을 적었어야 했다@** <br>
 Trigger는 사람이 말을 하는 부분 actions은 그에 맞는 행동을 인공지능스피커가 하는 것이다 <br>
 
+<br>
 </div>
 
 
@@ -117,7 +118,7 @@ intent는 사람이 AI 스피커에게 하는 말이므로 사용자들의 예�
 
 ### action 만들기
 > <img src="/image/action이동.gif" width="90%"><br><br>
-intent에 맞는 action을 작성하기 위해 **Actions => Custom Actions => Action** 추가를 누른다<br>
+intent에 맞는 action을 작성하기 위해 **Actions => Custom Actions => Action 추가** 를 누른다<br>
 내가 작성한 intent에 다 맞는 action을 연결시켜줬기 때문에 "연결한 Intent가 없습니다"가 떴다<br><br>
 <br><img src="/image/action_01.png" width="90%"><br><br>
 action 이름을 알맞게 적어준다! intent랑 똑같게 적고 뒤에 _action 이라고 적으면 더 좋을 것이다 <br>
@@ -128,7 +129,7 @@ action 이름을 알맞게 적어준다! intent랑 똑같게 적고 뒤에 _acti
 <br><img src="/image/back_para.gif" width="90%"><br><br>
 **Global 설정 => Backend Parameter 에서 변수들을 입력해준다**<br>
 협업을 한다면 옆에다가 변수가 어디에 쓰이는지 적는게 좋다<br><br>
-<br><img src="/image/output.png" width="80%"><br>
+<br><img src="/image/output1.png" width="80%"><br>
 이제 play가 문제를 내는 ouput을 정의하는 곳이다 <br>
 play가 사용자들이 답변을 한다는 걸 알 수 있도록 **정답을 외친후 답변**을 해달라고 요청한다<br>
 que_index 변수는 (0-4)를 갖고 있으므로 숫자로 직접 발화를 하는 것보다 <br>
@@ -136,7 +137,7 @@ fileter를 이용해 한글로 바꿔줘서 발화를 하는게 낫다고 생각
 <br><img src="/image/filter.gif" width="80%"><br>
 **Responce Filters => NLG Translator => (맨 오른쪽 파란색버튼) + Translator 추가를 해준다<br>
 
-
+<br><br>
 <div align="center">
 
 사자야 게임하자 라는 질문을 받게 되면 정답을 체크하는 발화는 나오면 안되므로 <br>
@@ -145,23 +146,34 @@ fileter를 이용해 한글로 바꿔줘서 발화를 하는게 낫다고 생각
 [que_index(문제번호)가 0일 경우] 지금까지는 게임을 시작하기 위한 intent와 action을 만들었다 <br>
 [que_indx(문제번호)가 1~3일 경우]이제는 게임을 하면서 앞에 질문에 대한 정답과 오답을 알려주는 intent와 action을 만들것이다<br>
 
-
 </div>
+<br><br>
 
 ### intent 만들기
-> <br><img src="/image/answer_intent.gif" width="80%"><br>
+> <br><img src="/image/entity.gif width="80%"><br>
+이제는 Entity를 사용할 것이다. Entity는 같은 속성들이 모여진 집합체로 생각하면 편하다<br>
+intent에서 집합체에 포함된 속성에 따라 답변을 하고 싶다면 사용하기 아주 좋다<br>
+**User Utterance Model => Entity Types => ** (맨오른쪽 파란색 버튼인) **Entity 추가**<br>
+위의 방법대로 Entity를 추가할 수 있다 <br>
+백엔드에 넣을 모든 사자성어 뒷부분을 Entity로 다 넣어줘야 했다<br>
+<br>
+<br><img src="/image/answer_intent.gif" width="80%"><br>
 첫번째 질문이 나왔으니 그 이후부터 대답할 사용자의 예상발화들을 담아 놓았다 <br>
 이전 action에서 정답을 외치고 답변을 해달라고 했으니 그에 맞게 발화를 작성했다<br>
 사자성어 뒤에서 두글자를 모아논 것이다<br>
 backend에 담아놓은 사자성어의 두글자만 작성했다 <br>
 여기서 하나 아쉬운점이 있다 <br>
 굳이 내가 다 작성하지 않고 bacekend로 사자성어의 뒷부분을 알아서 가져와서 했으면 얼마나 좋았을가라는 아쉬움이 있다 <br>
-<br><img src="/image/entity.gif width="80%">"</br>
-이제는 Entity를 사용할 것이다. Entity는 같은 속성들이 모여진 집합체로 생각하면 편하다<br>
-intent에서 집합체에 포함된 속성에 따라 답변을 하고 싶다면 사용하기 아주 좋다<br>
+주황색으로 하이라이팅 된 부분은  Entity에 속한다는 걸 알려주는 것이다<br>
+방금 전 만든 Entity를 사용하는 부분이다. 만들어 놓은 Entity에 대해 intent를 만들어주면 된다 <br>
+
+
 
 ### action 만들기
-
+><br><img src="/image/action2.gif" width="90%"><br>
+사용자와 인공지능스피커가 서로 대화하듯이 게임을 하는 부분의 action이다 <br>
+게임을 하고 있다고 해서 ing_saja라고 이름을 붙였다 <br>
+다시 한번 말하지만 이름은 무조건 뒤에 action 인지 intent인지 붙여주는게 더 좋다고 생각한다 <br>
 
 
 
