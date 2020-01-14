@@ -135,14 +135,14 @@ action 이름을 알맞게 적어준다! intent랑 똑같게 적고 뒤에 _acti
 <br><img src="/image/back_para.gif" width="90%"><br><br>
 
 **Global 설정 => Backend Parameter 에서 변수들을 입력해준다**<br>
-협업을 한다면 옆에다가 변수가 어디에 쓰이는지 적는게 좋다<br><br>
+협업을 한다면 옆에다가 변수가 어디에 쓰이는지 적는게 좋다<br>
 
 <br><img src="/image/output1.png" width="90%"><br><br>
 
 이제 play가 문제를 내는 ouput을 정의하는 곳이다 <br>
 play가 사용자들이 답변을 한다는 걸 알 수 있도록 **정답을 외친후 답변**을 해달라고 요청한다<br>
 que_index 변수는 (0-4)를 갖고 있으므로 숫자로 직접 발화를 하는 것보다 <br>
-fileter를 이용해 한글로 바꿔줘서 발화를 하는게 낫다고 생각했다<br><br>
+fileter를 이용해 한글로 바꿔줘서 발화를 하는게 낫다고 생각했다<br>
 
 <br><img src="/image/filter.gif" width="90%"><br><br>
 **Responce Filters => NLG Translator =>** (맨 오른쪽 파란색버튼) **+ Translator 추가**를 해준다<br><br><br>
@@ -166,41 +166,70 @@ fileter를 이용해 한글로 바꿔줘서 발화를 하는게 낫다고 생각
 
 ### intent 만들기
 <br><img src="/image/entity.gif" width="80%"><br><br>
+
 이제는 Entity를 사용할 것이다. Entity는 같은 속성들이 모여진 집합체로 생각하면 편하다<br>
 intent에서 집합체에 포함된 속성에 따라 답변을 하고 싶다면 사용하기 아주 좋다<br>
 **User Utterance Model => Entity Types =>** (맨오른쪽 파란색 버튼인) **Entity 추가**<br>
 위의 방법대로 Entity를 추가할 수 있다 <br>
 백엔드에 넣을 모든 사자성어 뒷부분을 Entity로 다 넣어줘야 했다<br><br>
+
 <br><img src="/image/answer_intent.gif" width="90%"><br><br>
+
 첫번째 질문이 나왔으니 그 이후부터 대답할 사용자의 예상발화들을 담아 놓았다 <br>
 이전 action에서 정답을 외치고 답변을 해달라고 했으니 그에 맞게 발화를 작성했다<br>
-사자성어 뒤에서 두글자를 모아논 것이다<br>
-backend에 담아놓은 사자성어의 두글자만 작성했다 <br>
+backend에 담아놓은 사자성어의 두글자만 작성한 것이다 <br>
 굳이 내가 다 작성하지 않고 bacekend로 사자성어의 뒷부분을 알아서 가져와서 했으면 얼마나 좋았을가라는 아쉬움이 있다 <br>
 주황색으로 하이라이팅 된 부분은  Entity에 속한다는 걸 알려주는 것이다<br>
-방금 전 만든 Entity를 사용하는 부분이다. 만들어 놓은 Entity에 대해 intent를 만들어주면 된다 <br>
+방금 전 만든 Entity를 사용하는 부분이다. 만들어 놓은 Entity에 대해 intent를 만들어주면 된다 <br><br><br>
 
 
 
 ### action 만들기
 <br><img src="/image/action2.gif" width="90%"><br><br>
+
 사용자와 인공지능스피커가 서로 대화하듯이 게임을 하는 부분의 action이다 <br>
 게임을 하고 있다고 해서 ing_saja라고 이름을 붙였다 <br>
-다시 한번 말하지만 이름은 무조건 뒤에 action 인지 intent인지 붙여주는게 더 좋다<br><br>
+다시 한번 말하지만 이름은 무조건 뒤에 action 인지 intent인지 붙여주는게 더 좋다<br>
 Trigger는 앞서만든 intent와 연결을 시켜준다 <br>
-<br><img src="/image/utter.png" width="90%"><br><br>
-응답이 필요한 정보 - Utterance Parameter 에서 사용자가 외친 entity를 가져온다. <br>
-이름은 직접 정할 수 있으니 분별이 가능하게 backend parameter랑 다르게 정하는게 좋다 <br>
-answer이라는 parameter 안에 사용자가 말한 정답이 있는 것이다.<br>
-이떄 중요한 점은 답변이 있어야 계속 게임을 진행할 수 있기 떄문에 **필수**에다가 체크를 꼭 해야한다<br>
-그리고 옆에 있는 버튼을 누르고 답변이 없을 경우 발화를 작성해주면 된다<br>
-이제 output 정의를 할 차례다 <br>
-branch를 middle: 사용해서 문제를 계속 내야하는 상황 / last: 마지막 문제를 내는 상황으로 분리했다 <br>
+**마지막 응답부분이 중요한 포인트이다**<br>
+여기서 인공지능 스피커가 대답을 하는게 아니라 어떤 대답으로 할지 정해주는 말 그래도 brach 해주는 부분이다 <br>
+que_index 값에 따라 응답해야하는 내용이 다르기 때문에 **output 유형 : Branch Action **으로 하였다<br>
+middle: 사용해서 문제를 계속 내야하는 상황 / last: 마지막 문제를 내는 상황으로 분리했다 <br>
 last는 딱 한번만 들어가면 되므로 default branch를 middle로 정하였다 <br>
 
 
+<br><img src="/image/utter.png" width="90%"><br><br>
+
+움짤로 설명이 부족한 부분을 사진으로 가져 왔다 <br>
+응답이 필요한 정보 ->  Utterance Parameter 에서 사용자가 외친 entity를 가져온다. <br>
+이름은 직접 정할 수 있으니 분별이 가능하게 backend parameter랑 다르게 정하는게 좋다 <br>
+answer이라는 parameter 안에 사용자가 말한 정답이 있는 것이다.<br>
+이떄 중요한 점은 답변이 있어야 계속 게임을 진행할 수 있기 떄문에 **필수에다가 체크를 꼭 해야한다**<br>
+그리고 옆에 있는 버튼을 누르고 답변이 없을 경우 발화를 작성해주면 된다<br>
 
 
+<br><img src="/image/middel.gif" width="90%"><br><br>
+
+default branch인 middle인 부분이다 <br>
+intent에 맞춰서 들어오는것이 아니라 답변에 맞춰서 middle 액션이 실행되기 때문에 연결되는 트리거는 없다<br>
+또한 default branch 이기 때문에 다른 조건을 설정해줄 필요가 없다<br>
+응답에 필요한 정보는 이전 action에서 가져오기때문에 수정을 해줄 수 없다<br>
+여기서 스피커의 답변을 이제 들을 수 있다 앞서 문제의 정답을 확인하고 새로운 문제를 내야하므로 <br>
+check 파라미터 (정답/오답) 인지 알려주고 처음 게임을 시작했던 output을 작성하면 된다 <br>
+게임이 계속 진행되어야 하므로 prompt 유형은 대기이다 <br>
+
+
+<br><img scr="/image/last_condition.gif" width="90%"><br><br>
+last는 조건을 넣어줘야한다 마지막으로 문제를 내야한다면 총 맞은 갯수를 알려줘야하기 때문이다<br>
+그래서 que_index가 4일 경우 last action으로 올 수 있게 조건을 위에다가 설정해줬다<br>
+위의 움짤처럼 설정을 해주면 된다. 조건에 따라 branch로 빠지게 할 수 있는 방법이 꼭 parameter 값이랑 같을 필요는 없다<br>
+상황에 따라 맞게 조건을 설정해주면 원하는 play를 만들 수 있을 것이다 <br>
+
+<br><img src="/image/last.gif" width="90%"><br><br>
+이제서야 게임의 마무리 부분이다 백엔드 코딩도 작성해야 하지만 play는 last action까지만 작성하면된다
+middle과 같게 마지막 문제의 정답/오답을 알려주고 (check 파라미터) <br>
+ans_cnt(정답갯수를 알려주는 파라미터)를 filter로 이용해 바꿔서 발화하게 한다 <br>
+이전까지는 현재 몇번 문제인지를 알려줬다면 마지막에는 정답갯수를 알려주는 파라미터의 값을 filter로 변환시켜준다<br>
 
 
 ## 2. 사자성어 뜻을 물어보기
