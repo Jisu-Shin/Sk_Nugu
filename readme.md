@@ -193,7 +193,7 @@ backend에 담아놓은 사자성어의 두글자만 작성한 것이다 <br>
 Trigger는 앞서만든 intent와 연결을 시켜준다 <br>
 **마지막 응답부분이 중요한 포인트이다**<br>
 여기서 인공지능 스피커가 대답을 하는게 아니라 어떤 대답으로 할지 정해주는 말 그래도 brach 해주는 부분이다 <br>
-que_index 값에 따라 응답해야하는 내용이 다르기 때문에 **output 유형 : Branch Action **으로 하였다<br>
+que_index 값에 따라 응답해야하는 내용이 다르기 때문에 **output 유형 : Branch Action** 으로 하였다<br>
 middle: 사용해서 문제를 계속 내야하는 상황 / last: 마지막 문제를 내는 상황으로 분리했다 <br>
 last는 딱 한번만 들어가면 되므로 default branch를 middle로 정하였다 <br>
 
@@ -208,7 +208,7 @@ answer이라는 parameter 안에 사용자가 말한 정답이 있는 것이다.
 그리고 옆에 있는 버튼을 누르고 답변이 없을 경우 발화를 작성해주면 된다<br>
 
 
-<br><img src="/image/middel.gif" width="90%"><br><br>
+<br><img src="/image/middle.gif" width="90%"><br><br>
 
 default branch인 middle인 부분이다 <br>
 intent에 맞춰서 들어오는것이 아니라 답변에 맞춰서 middle 액션이 실행되기 때문에 연결되는 트리거는 없다<br>
@@ -226,7 +226,7 @@ last는 조건을 넣어줘야한다 마지막으로 문제를 내야한다면 �
 상황에 따라 맞게 조건을 설정해주면 원하는 play를 만들 수 있을 것이다 <br>
 
 <br><img src="/image/last.gif" width="90%"><br><br>
-이제서야 게임의 마무리 부분이다 백엔드 코딩도 작성해야 하지만 play는 last action까지만 작성하면된다
+이제서야 게임의 마무리 부분이다 백엔드 코딩도 작성해야 하지만 play는 last action까지만 작성하면된다<br>
 middle과 같게 마지막 문제의 정답/오답을 알려주고 (check 파라미터) <br>
 ans_cnt(정답갯수를 알려주는 파라미터)를 filter로 이용해 바꿔서 발화하게 한다 <br>
 이전까지는 현재 몇번 문제인지를 알려줬다면 마지막에는 정답갯수를 알려주는 파라미터의 값을 filter로 변환시켜준다<br>
