@@ -218,8 +218,7 @@ intent에 맞춰서 들어오는것이 아니라 답변에 맞춰서 middle 액�
 check 파라미터 (정답/오답) 인지 알려주고 처음 게임을 시작했던 output을 작성하면 된다 <br>
 게임이 계속 진행되어야 하므로 prompt 유형은 대기이다 <br>
 
-
-<br><img scr="/image/last_condition.gif" width="90%"><br><br>
+<br><img src="/image/last_condition.gif" width="90%"><br><br>
 last는 조건을 넣어줘야한다 마지막으로 문제를 내야한다면 총 맞은 갯수를 알려줘야하기 때문이다<br>
 그래서 que_index가 4일 경우 last action으로 올 수 있게 조건을 위에다가 설정해줬다<br>
 위의 움짤처럼 설정을 해주면 된다. 조건에 따라 branch로 빠지게 할 수 있는 방법이 꼭 parameter 값이랑 같을 필요는 없다<br>
